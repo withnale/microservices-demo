@@ -83,6 +83,8 @@ kind: Service
 metadata:
   name: {{ .Values.paymentService.name }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.paymentService.name }}
 spec:
   type: ClusterIP
   selector:

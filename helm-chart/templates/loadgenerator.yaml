@@ -111,6 +111,8 @@ kind: Sidecar
 metadata:
   name: {{ .Values.loadGenerator.name }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.loadGenerator.name }}
 spec:
   workloadSelector:
     labels:

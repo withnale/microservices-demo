@@ -87,6 +87,8 @@ kind: Service
 metadata:
   name: {{ .Values.recommendationService.name }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.recommendationService.name }}
 spec:
   type: ClusterIP
   selector:

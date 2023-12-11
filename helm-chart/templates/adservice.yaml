@@ -75,6 +75,8 @@ kind: Service
 metadata:
   name: {{ .Values.adService.name }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.adService.name }}
 spec:
   type: ClusterIP
   selector:
