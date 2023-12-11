@@ -82,6 +82,8 @@ kind: Service
 metadata:
   name: {{ .Values.cartService.name }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.cartService.name }}
 spec:
   type: ClusterIP
   selector:

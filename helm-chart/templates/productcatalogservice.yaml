@@ -131,6 +131,8 @@ kind: Sidecar
 metadata:
   name: {{ .Values.productCatalogService.name }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.productCatalogService.name }}
 spec:
   workloadSelector:
     labels:

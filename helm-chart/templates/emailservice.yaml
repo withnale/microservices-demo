@@ -85,6 +85,8 @@ kind: Service
 metadata:
   name: {{ .Values.emailService.name }}
   namespace: {{ .Release.Namespace }}
+  labels:
+    app: {{ .Values.emailService.name }}
 spec:
   type: ClusterIP
   selector:
